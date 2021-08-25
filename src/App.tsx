@@ -1,5 +1,10 @@
-import "./App.css";
+import { GlobalStyle } from "./styles/global";
 
 export function App() {
-  return <div className="title">Oi mundola</div>;
+  return (
+    <div className="App">
+      <h1>Oi Mundola</h1>
+      <GlobalStyle />
+    </div>
+  );
 }
