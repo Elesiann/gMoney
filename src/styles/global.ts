@@ -3,16 +3,26 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 
     :root {
-        --background-color: #f0f2f5;
+        --background-color: #193F2F;
         --shape-color: #ffffff;
 
         --violet-color: #5429CC;
         --violet-color-light: #6944ff;
         --red-color: #e52e4d;
-        --green-color: #33cc95;
+        --green-color: #D8F3DC;
 
         --text-title: #363f5f;
         --text-body: #969cb3;
+
+        --nyanza: #d8f3dcff;
+        --turquoise-green: #b7e4c7ff;
+        --turquoise-green-2: #95d5b2ff;
+        --ocean-green: #74c69dff;
+        --ocean-green-2: #52b788ff;
+        --illuminating-emerald: #40916cff;
+        --bottle-green: #245741;
+        --brunswick-green: #1b4332ff;
+        --dark-jungle-green: #081c15ff;
     }
 
     
@@ -34,7 +44,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background-color: red !important;
+        background-color: #D8F3DC;
         //deixa as fontes com menos serrilhado
         -webkit-font-smoothing: antialiased;
     }
@@ -50,6 +60,10 @@ export const GlobalStyle = createGlobalStyle`
 
     button {
         cursor: pointer;
+    }
+
+    .logo {
+        width: 150px;
     }
 
 
