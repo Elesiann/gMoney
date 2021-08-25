@@ -15,6 +15,8 @@ export const GlobalStyle = createGlobalStyle`
         --text-body: #969cb3;
     }
 
+    
+
     * {
         margin: 0;
         padding: 0;
@@ -32,7 +34,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background-color: --background-color;
+        background-color: red !important;
         //deixa as fontes com menos serrilhado
         -webkit-font-smoothing: antialiased;
     }
@@ -49,6 +51,7 @@ export const GlobalStyle = createGlobalStyle`
     button {
         cursor: pointer;
     }
+
 
     // todos os elementos disabled vao receber essas propriedades
     [disabled] {
