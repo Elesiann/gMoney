@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
         --text-title: #363f5f;
         --text-body: #969cb3;
 
+        --mint-cream: #f2f8f3ff;
         --nyanza: #d8f3dcff;
         --turquoise-green: #b7e4c7ff;
         --turquoise-green-2: #95d5b2ff;
