@@ -9,11 +9,21 @@ export const Container = styled.div`
     border-spacing: 0 0.5rem;
 
     th {
-      color: var(--text-title);
+      color: var(--mint-cream);
       font-weight: 700;
       padding: 1rem 2rem;
       text-align: left;
       line-height: 2rem;
+      background-color: var(--bottle-green);
+
+      &:first-child {
+        font-weight: 600;
+        border-radius: 0.5rem 0 0 0.5rem;
+      }
+
+      &:last-child {
+        border-radius: 0 0.5rem 0.5rem 0;
+      }
     }
 
     td {
