@@ -4,7 +4,7 @@ export const GlobalStyle = createGlobalStyle`
 
     :root {
         --background-color: #193F2F;
-        --shape-color: #ffffff;
+        --shape-color: #f5f5f7;
 
         --violet-color: #5429CC;
         --violet-color-light: #6944ff;
@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
         --illuminating-emerald: #40916cff;
         --bottle-green: #245741;
         --brunswick-green: #1b4332ff;
-        --dark-jungle-green: #081c15ff;
+        --phthalo-green: #112C20;
     }
 
     
@@ -45,7 +45,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background-color: #D8F3DC;
+        background-color: #e0e2df;
         //deixa as fontes com menos serrilhado
         -webkit-font-smoothing: antialiased;
     }

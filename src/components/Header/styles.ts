@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.header`
-    background-color: var(--bottle-green);
+    background-color: #112C20;
 `
 
 export const Content = styled.div`

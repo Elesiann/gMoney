@@ -29,7 +29,7 @@ export const Container = styled.div`
     }
 
     .highlightBackground {
-        background-color: var(--illuminating-emerald);
+        background-color: var(--bottle-green);
         color: var(--mint-cream);
     }
 `
