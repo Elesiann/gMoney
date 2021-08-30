@@ -23,6 +23,7 @@ export const Content = styled.div`
     padding: 0.5rem 2rem;
     border-radius: 0.25rem;
     transition: all.3s;
+    z-index: 2;
   }
 
   button:hover {
@@ -30,5 +31,14 @@ export const Content = styled.div`
     font-size: 1.1rem;
     background: var(--mint-cream);
     color: var(--background-color);
+  }
+
+  .lupin {
+    position: absolute;
+    width: 150px;
+    transform: rotate(45deg);
+    z-index: 1;
+    opacity: 0.5;
+    right: 2rem;
   }
 `;
