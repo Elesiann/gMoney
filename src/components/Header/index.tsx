@@ -13,10 +13,10 @@ export function Header({ onOpenNewTransactionModal }: HeaderProps) {
   return (
     <Container>
       <Content>
+        <img className="lupin" src={Lupin} alt="lupin" />
         <a href="#">
           {" "}
           <img className="logo" src={logoImg} alt="gMoney" />
-          <img className="lupin" src={Lupin} alt="gMoney" />
         </a>
         <button type="button" onClick={onOpenNewTransactionModal}>
           Nova transação

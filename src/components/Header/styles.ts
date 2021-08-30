@@ -35,10 +35,12 @@ export const Content = styled.div`
 
   .lupin {
     position: absolute;
-    width: 150px;
+    width: 250px;
     transform: rotate(45deg);
-    z-index: 1;
-    opacity: 0.5;
+    z-index: -1;
+    opacity: 0.3;
     right: 2rem;
+    bottom: 2rem;
   }
+
 `;

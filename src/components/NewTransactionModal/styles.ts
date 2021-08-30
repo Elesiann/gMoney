@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { darken } from "polished";
 
 export const Container = styled.form`
+
   h2 {
     color: var(--text-title);
     font-size: 1.5rem;
@@ -51,11 +52,20 @@ export const TransactionTypeContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
 
-  button {
+  
+`;
+
+interface RadioBoxProps {
+  isActive: boolean;
+}
+
+export const RadioBox = styled.button<RadioBoxProps>`
     height: 4rem;
     border: 1px solid #d7d7d7;
     border-radius: 0.25rem;
-    background: transparent;
+    
+    background: ${(props) => props.isActive ? '#eee' : 'transparent'};
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,19 +74,19 @@ export const TransactionTypeContainer = styled.div`
     &:hover {
       border-color: ${darken(0.2, "#d7d7d7")};
     }
-  }
+    
+    img {
+      height: 28px;
+      width: 28px;
+    }
 
-  img {
-    height: 28px;
-    width: 28px;
-  }
-
-  span {
-    display: inline-block;
-    letter-spacing: 0.25rem;
-    font-size: 1.25rem;
-    font-weight: 500;
-    margin-right: 1rem;
-    color: var(--text-title);
-  }
-`;
+    span {
+      display: inline-block;
+      letter-spacing: 0.25rem;
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-right: 1rem;
+      color: var(--text-title);
+    }
+    
+    `
