@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+
+    
+
     display: grid;
     //3 colunas de 1 tamanho 1fr 1fr 1fr
     grid-template-columns: repeat(3, 1fr);
@@ -12,6 +15,7 @@ export const Container = styled.div`
         padding: 1.5rem 2rem;
         border-radius: 0.25rem;
         color: var(--text-title);
+        z-index: 0;
         
     }
 

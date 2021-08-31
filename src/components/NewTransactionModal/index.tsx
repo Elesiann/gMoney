@@ -18,6 +18,10 @@ export function NewTransactionModal({
 
   const [type, setType] = useState('deposit')
 
+  function handleCreateNewTransaction(){
+    
+  }
+
 
   return (
     <Modal

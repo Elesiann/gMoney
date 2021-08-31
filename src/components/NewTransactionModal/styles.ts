@@ -3,6 +3,8 @@ import { darken, transparentize } from "polished";
 
 export const Container = styled.form`
 
+  z-index: 3;
+
   h2 {
     color: var(--text-title);
     font-size: 1.5rem;

@@ -37,10 +37,10 @@ export const Content = styled.div`
     position: absolute;
     width: 250px;
     transform: rotate(45deg);
-    z-index: -1;
+    z-index: 0;
     opacity: 0.3;
     right: 2rem;
-    bottom: 2rem;
+    top: 2rem;
   }
 
 `;
