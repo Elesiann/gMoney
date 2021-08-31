@@ -23,7 +23,7 @@ export const Content = styled.div`
     padding: 0.5rem 2rem;
     border-radius: 0.25rem;
     transition: all.3s;
-    z-index: 2;
+    z-index: 0;
   }
 
   button:hover {
@@ -42,5 +42,4 @@ export const Content = styled.div`
     right: 2rem;
     top: 2rem;
   }
-
 `;

@@ -5,9 +5,31 @@ import { App } from "./App";
 import { request } from "https";
 
 createServer({
-
   models: {
-    transaction: Model
+    transaction: Model,
+  },
+
+  seeds(server) {
+    server.db.loadData({
+      transactions: [
+        {
+          id: 1,
+          title: "Freelance de website",
+          type: "deposit",
+          category: "Dev",
+          amount: 6000,
+          createdAt: new Date("2021-08-31 17:00:00"),
+        },
+        {
+          id: 2,
+          title: "Aluguel",
+          type: "withdraw",
+          category: "Casa",
+          amount: 1100,
+          createdAt: new Date("2021-03-08 09:00:00"),
+        },
+      ],
+    });
   },
 
   routes() {
@@ -15,14 +37,14 @@ createServer({
     this.namespace = "api";
     // rota api/transactions
     this.get("/transactions", () => {
-      return this.schema.all('transaction')
+      return this.schema.all("transaction");
     });
 
-    this.post('/transactions', (schema, request) => {
-      const data = JSON.parse(request.requestBody)
+    this.post("/transactions", (schema, request) => {
+      const data = JSON.parse(request.requestBody);
 
-      return schema.create('transaction', data)
-    })
+      return schema.create("transaction", data);
+    });
   },
 });
 
