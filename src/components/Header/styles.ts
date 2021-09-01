@@ -36,10 +36,10 @@ export const Content = styled.div`
   .lupin {
     position: absolute;
     width: 250px;
-    transform: rotate(45deg);
+    transform: rotate(30deg);
     z-index: 0;
     opacity: 0.3;
-    right: 2rem;
-    top: 2rem;
+    right: 3rem;
+    top: 1rem;
   }
 `;

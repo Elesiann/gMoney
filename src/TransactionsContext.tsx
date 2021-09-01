@@ -1,7 +1,6 @@
 import { createContext, useEffect, useState, ReactNode } from "react";
 import { api } from "./services/api";
 
-
 interface Transaction {
   id: number;
   title: string;
@@ -19,7 +18,7 @@ interface Transaction {
 // }
 
 // cria uma nova interface mas omite as propriedades id e created at de transaction
-type TransactionInput = Omit<Transaction, 'id' | 'createdAt'>
+type TransactionInput = Omit<Transaction, "id" | "createdAt">;
 
 // cria uma interface e seleciona as propriedades desejadas
 // type TransactionInput = Pick<Transaction, 'title' | 'amount' | 'type' | 'category'>
@@ -29,13 +28,13 @@ interface TransactionsProviderProps {
 }
 
 interface TransactionsContextData {
-  transactions: Transaction[]
-  createTransaction: (transaction: TransactionInput) => void
+  transactions: Transaction[];
+  createTransaction: (transaction: TransactionInput) => Promise<void>;
 }
 
 export const TransactionsContext = createContext<TransactionsContextData>(
   {} as TransactionsContextData
-  );
+);
 
 export function TransactionsProvider({ children }: TransactionsProviderProps) {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
@@ -46,9 +45,15 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
       .then((response) => setTransactions(response.data.transactions));
   }, []);
 
-  function createTransaction(transaction: TransactionInput) {
+  async function createTransaction(transactionInput: TransactionInput) {
+    const response = await api.post("/transactions", {
+      ...transactionInput,
+      createdAt: new Date()
+    });
 
-    api.post('/transactions', transaction)
+    const { transaction } = response.data;
+
+    setTransactions([...transactions, transaction]);
   }
 
   return (
